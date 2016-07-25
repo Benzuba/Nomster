@@ -13,6 +13,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer',  platforms: :ruby
+gem 'will_paginate', '~> 3.1'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -23,6 +24,7 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'bootstrap-sass', '~> 3.3.5.1'
 gem 'sprockets', '2.11.0'
+gem 'simple_form'
 
 
 gem 'sdoc', '~> 0.4.0',          group: :doc
