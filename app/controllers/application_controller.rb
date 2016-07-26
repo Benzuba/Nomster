@@ -4,4 +4,3 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 end
 
-Place.paginate(:page => params[:page], :per_page => 2)
