@@ -40,6 +40,7 @@
 
     <br />
 
+
   <div class="pull-rigth">
     <% if current_user && current_user == @place.user %>
       <%= link_to 'Edit', edit_place_path(@place), class: 'btn btn-primary' %>
@@ -68,24 +69,32 @@
   </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
 
-<!-- Button trigger modal -->
 
 
-<!-- Modal -->
+
+    
+
+
+
+<!-- Modal for comment-->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         <h4 class="modal-title" id="myModalLabel">Add a comment</h4>
+      
+
+
       </div>
       <%= simple_form_for @comment, url: place_comments_path(@place) do |f| %>
         <div class="modal-body">
           <%= f.input :message %>
           <%= f.input :rating, as: :select, collection: Comment::RATINGS %>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+
+ <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">close</button>
           <%= f.submit "Add a Comment", class: 'btn btn-primary' %>
         </div>
       <% end %>
@@ -93,15 +102,49 @@
   </div>
 </div>
 
+
+
+
+
 <div class="col-xs-10 col-xs-offset-1">  
 <h1 class="pull-left">Comments</h1>
+
+
+
+    <!-- Modal for photo simple form -->
+  <div class="clear"></div>
+<%= simple_form_for @photo, url: place_photos_path do |f| %>
+  <%= f.input :caption %>
+  <%= f.submit "Add a Photo", class: 'btn btn-primary' %>
+<% end %>
+
+<!-- Button trigger modal -->
+    <button class="btn btn-primary btn-lg pull-right" data-toggle="modal" data-target="#myModalPhoto">
+      Add a Photo
+    </button>
+</div>
+
+
+
+<div class="col-xs-10 col-xs-offset-1">  
+
 <!-- Button trigger modal -->
 <button class="btn btn-primary btn-lg pull-right" data-toggle="modal" data-target="#myModal">
-  Add a comment
+  Add a Comment  
 </button>
 </div>
 
+
+
+
+
+
 <div class="clear"></div>
+
+<% @place.photos.each do |photo| %>
+  <div class="col-xs-12 col-sm-6">
+ </div>
+<% end %>
 
 <% @place.comments.each do |comment| %>
   <div class="col-xs-12 col-sm-6">
