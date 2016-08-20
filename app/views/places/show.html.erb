@@ -123,12 +123,15 @@
 </div>
 
 <div class="clear"></div>
-<% @place.photos.each do |photo| %>
+
+
+  <% @place.photos.each do |photo| %>
   <div class="col-xs-12 col-sm-6">
-    <blockquote>
-      <%= photo.caption %>
-    </blockquote>
-  </div
+    
+      <%= image_tag photo.picture %>
+       <%= photo.caption %>
+    
+  </div>
 <% end %>
 
 <div class="clear"></div>
