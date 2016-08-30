@@ -9,6 +9,8 @@ root 'places#index'
   resources :places do
     resource :photos, only: :create 
   end 
+  resources :users, only: :show
+  
 
 
   # You can have the root of your site routed with "root"
