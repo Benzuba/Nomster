@@ -2,6 +2,18 @@
 @import "bootstrap";
 @import url(https://fonts.googleapis.com/css?family=Lobster);
 
+.image {
+  display: block;
+  margin: auto;
+  height: 200px;
+}
+
+.caption{
+  color: black;
+  font-weight: bold;
+  text-align: center;
+}
+
 .carousel-inner > .item > img, .carousel-inner > .item > a > img {
     max-height: 550px;
     width: 100%;
@@ -55,7 +67,7 @@ font-family: Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, 
 .navbar-inverse .navbar-brand {
   color: #24B1E0;
   font-family: 'Lobster', cursive;
-  
+
 }
 
 .field_with_errors {

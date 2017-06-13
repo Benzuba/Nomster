@@ -11,7 +11,7 @@
     <div class="item active">
     <%= image_tag 'slider1.jpg', class: 'img-responsive' %>
     <div class="carousel-caption">
-      Find the best locally sourced meats 
+      Find the best locally sourced meats
       </div>
     </div>
    <div class="item">
@@ -45,15 +45,15 @@
 
     <div class="pull-left">
     <% if place.user.present? %>
-      <small><%= place.user.email %></small>
+      <small>Reviewed By: <%= place.user.email %></small>
     </div>
     <% end %>
-    
+
     <% if place.comments.present? %>
     <div class="col-sm-6 pull-left">
       <blockquote>
         <% if place.comments.last.humanized_rating.present? %>
-          <b><%= place.comments.last.humanized_rating %></b> -
+          <b><%= place.comments.last.humanized_rating %></b>
         <% end %>
         <%= place.comments.last.message %>
         <small><%= place.comments.last.user.email %></small>

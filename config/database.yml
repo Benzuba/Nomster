@@ -20,7 +20,7 @@ default: &default
   # For details on connection pooling, see rails configuration guide
   # http://guides.rubyonrails.org/configuring.html#database-pooling
   pool: 5
-  username: postgres
+
   password: password
   host: localhost
 
@@ -28,7 +28,7 @@ default: &default
 development:
   <<: *default
   database: nomster_development
-  username: postgres
+
   password: password
   host: localhost
 
@@ -65,9 +65,9 @@ development:
 test:
   <<: *default
   database: nomster_test
-  username: Postgres 
+ 
   password: password
-  host: localhost 
+  host: localhost
 
 # As with config/secrets.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -91,6 +91,6 @@ test:
 production:
   <<: *default
   database: nomster_production
-  username: Postgres 
+  username: Postgres
   password: password
-  host: localhost 
+  host: localhost
